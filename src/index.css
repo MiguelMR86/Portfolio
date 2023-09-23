@@ -13,6 +13,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --first: #1c1a1c;
+  --second: #5cff5c;
+  --second-blur: rgba(85, 230, 145, 0.5);
+  --third: #2f2f2f;
+  --fourth: #8d8d8d; /* rgba */ 
+  background: var(--first);
+  color: white;
 }
 
 /* Loader */
@@ -85,7 +92,7 @@
 .bars {
   width: 100%;
   height: 4px;
-  background-color: #5cff5c;
+  background-color: var(--second);
   border-radius: 4px;
 }
 
@@ -122,4 +129,8 @@
 #checkbox:checked + .toggle {
   transition-duration: .5s;
   transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

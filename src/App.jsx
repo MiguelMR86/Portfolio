@@ -1,12 +1,16 @@
-import { RouterProvider } from "react-router-dom"
-import router from './routes/Router'
+import React from 'react'
+import Header from './components/Header'
+import Main from './components/Main'
+import Menu from './components/others/Menu'
 
 function App() {
 
   return (
-    <>
-      <RouterProvider router={router}/>
-    </>
+    <div className='w-full min-h-screen'>
+      <Header />
+      <Menu />
+      <Main />
+    </div>
   )
 }
 
