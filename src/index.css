@@ -15,7 +15,7 @@
   box-sizing: border-box;
   --first: #1c1a1c;
   --second: #5cff5c;
-  --second-blur: rgba(85, 230, 145, 0.5);
+  --second-blur: rgba(5, 207, 90, 0.6);
   --third: #2f2f2f;
   --fourth: #8d8d8d; /* rgba */ 
   background: var(--first);
