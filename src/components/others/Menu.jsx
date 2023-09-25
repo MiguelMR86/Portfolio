@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Context } from '../../context/Context'
 import { BsPerson, BsHouse } from 'react-icons/bs'
-import { AiOutlineFolderOpen, AiOutlineMessage } from 'react-icons/ai'
+import { AiOutlineFolderOpen, AiOutlineMessage, AiOutlineThunderbolt } from 'react-icons/ai'
 
 function Menu() {
   
@@ -22,6 +22,11 @@ function Menu() {
       <li>
         <a onClick={() => handleScroolSmooth('projects')}>
           <AiOutlineFolderOpen size={27} className='cursor-pointer text-[--second] hover:scale-125 transition-all duration-300 ease-in-out' />
+        </a>
+      </li>
+      <li>
+        <a onClick={() => handleScroolSmooth('skills')}>
+          <AiOutlineThunderbolt size={24} className='cursor-pointer text-[--second] hover:scale-125 transition-all duration-300 ease-in-out' />
         </a>
       </li>
       <li>
