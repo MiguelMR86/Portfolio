@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react";
+import emailjs from '@emailjs/browser';
 
 export const Context = createContext();
 
@@ -90,10 +91,55 @@ export function ContextProvider({ children, value: {...other} }) {
   // Handlers
   const handleOpenMenu = () => setOpenMenu(!openMenu);
 
+  const [status, setStatus] = useState()
+
+  const handleSubmit = (e, form) => {
+      e.preventDefault()
+      setStatus('Cargando...')
+      
+      const statusCont = document.getElementById('status')
+      const submitBtn = document.getElementById('submitBtn')
+      const name = form.current.name.value
+      const email = form.current.email.value
+      const message = form.current.message.value
+      
+      submitBtn.disabled = true
+      
+      if (statusCont.classList.contains('animate-fade-out')) statusCont.classList.remove('animate-fade-out')
+      if (statusCont.classList.contains('hidden')) statusCont.classList.remove('hidden')
+      
+      statusCont.classList.add('on-fade-in')
+      statusCont.classList.add('animate-fade-in')
+
+      try {
+          if (name.length === 0 || email.length === 0 || message.length === 0) {
+              setStatus('Por favor, rellena todos los campos')
+          } else {
+              emailjs.sendForm('service_en7yssh', 'template_lihpmh6', form.current, '12kMxdtztEBwQaSGR')
+              .then(() => {
+                  setStatus('Mensaje enviado con éxito')
+                  form.current.reset()
+              })
+          }   
+      } catch (e) {
+          setStatus('Error al enviar el mensaje')
+          form.current.reset()
+      } finally {
+          setTimeout(() => {
+              statusCont.classList.remove('on-fade-in')
+              statusCont.classList.remove('animate-fade-in')
+              statusCont.classList.add('animate-fade-out')
+              submitBtn.disabled = false
+          }, 3000);
+          return
+      }
+  };
+  
   const operators = {
     openMenu, handleOpenMenu,
     currentSection, setCurrentSection,
-    projects
+    projects,
+    status, handleSubmit,
   };
 
   return (
