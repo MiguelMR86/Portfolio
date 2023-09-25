@@ -17,7 +17,7 @@
   --second: #5cff5c;
   --second-blur: rgba(5, 207, 90, 0.6);
   --third: #2f2f2f;
-  --fourth: #8d8d8d; /* rgba */ 
+  --fourth: #47c756;
   background: var(--first);
   color: white;
 }

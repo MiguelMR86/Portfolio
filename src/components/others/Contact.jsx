@@ -15,7 +15,7 @@ function Contact() {
                     {status}
                 </div>
                 <div className='w-[320px]'>
-                    <button onClick={handleContactWithWhatsapp} className='w-full bg-[#47c756] p-4 mb-8 rounded-md flex justify-center items-center'>
+                    <button onClick={handleContactWithWhatsapp} className='w-full bg-[--fourth] p-4 mb-8 rounded-md flex justify-center items-center'>
                         WhatsApp
                         <AiOutlineWhatsApp className='ml-2' size={25} />
                     </button>
@@ -26,7 +26,7 @@ function Contact() {
                     <input placeholder='Nombre completo' type="text" name="name" id="name" className="w-full p-4 pl-5 bg-[--third] border-transparent border-2 focus:border-[--second] transition-all duration-300 ease-in-out rounded-md px-2 outline-none" />
                     <input placeholder='Correo elctrónico' type="email" name="email" id="email" className="w-full p-4 pl-5 bg-[--third] border-transparent border-2 focus:border-[--second] transition-all duration-300 ease-in-out rounded-md px-2 outline-none" />
                     <textarea placeholder='Mensaje' name="message" id="message" className="w-full p-4 h-[150px] min-h-[150px] max-h-[300px] pl-5 bg-[--third] border-transparent border-2 focus:border-[--second] transition-all duration-300 ease-in-out rounded-md px-2 outline-none"></textarea>
-                    <input id='submitBtn' type="submit" value="Enviar" className="w-[140px] p-4 mt-4 bg-[#47c756] rounded-md" />
+                    <input id='submitBtn' type="submit" value="Enviar" className="w-[140px] p-4 mt-4 bg-[--fourth] rounded-md" />
                 </form>
             </article>
             
