@@ -1,32 +1,30 @@
 import React, { useContext } from 'react'
 import { Context } from '../context/Context'
 import Logo from '../assets/Logo.svg'
+import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 
 function Footer() {
-  
-  const { handleScroolSmooth } = useContext(Context)
-  
+
+  const { handleContactWithGithub, handleContactWithLinkedin } = useContext(Context)
+
   const year = new Date().getFullYear()
-  
+
   return (
-    <footer id='footer' className='bg-[--third] w-full h-[50vh] p-8 sm:h-[41vh] xl:h-[38vh]'>
+    <footer id='footer' className='bg-[--third] w-full h-[48vh] p-8 sm:h-[41vh] xl:h-[38vh]'>
       <div className='sm:flex md:justify-between'>
         <img src={Logo} alt="Logo" width={100} height={100} />
-        <ul className='w-full flex justify-evenly items-center flex-wrap gap-4 md:w-[800px]'>
+        <ul className='w-full flex justify-center items-center sm:justify-end flex-wrap gap-8 md:w-[800px]'>
           <li>
-            <a onClick={() => handleScroolSmooth('home')}>Inicio</a>
+            <button onClick={handleContactWithGithub} className='w-[140px] bg-[#adbac7] p-4 rounded-md flex justify-center items-center'>
+              GitHub
+              <AiFillGithub className='ml-2' size={25} />
+            </button>
           </li>
           <li>
-            <a onClick={() => handleScroolSmooth('about')}>Sobre Mí</a>
-          </li>
-          <li>
-            <a onClick={() => handleScroolSmooth('projects')}>Proyetos</a>
-          </li>
-          <li>
-            <a onClick={() => handleScroolSmooth('skills')}>Habilidades</a>
-          </li>
-          <li>
-            <a onClick={() => handleScroolSmooth('contact')}>Contacto</a>
+            <button onClick={handleContactWithLinkedin} className='w-[140px] bg-[#0a66c2] p-4 rounded-md flex justify-center items-center'>
+              Linkedin
+              <AiFillLinkedin className='ml-2' size={25} />
+            </button>
           </li>
         </ul>
       </div>
