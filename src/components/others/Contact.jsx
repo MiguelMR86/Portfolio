@@ -13,7 +13,7 @@ function Contact() {
         <div id='contact' className='relative w-full                 min-h-screen flex flex-col gap-y-4 p-4 text-center'>
             <h2 className='font-bold text-3xl py-4 text-[--second]'>Contacto</h2>
             <article className="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] w-full h-full flex flex-col justify-center items-center gap-y-8 text-left">
-                <button onClick={handleContactWithWhatsapp} className='bg-indigo-500 p-4 rounded-md flex justify-center items-center'>
+                <button onClick={handleContactWithWhatsapp} className='bg-[#47c756] p-4 rounded-md flex justify-center items-center'>
                     WhatsApp
                     <AiOutlineWhatsApp className='ml-2' size={25}/>
                 </button>
