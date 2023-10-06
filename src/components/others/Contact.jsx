@@ -26,7 +26,7 @@ function Contact() {
                     <input placeholder='Nombre completo' type="text" name="name" id="name" className="w-full p-4 pl-5 bg-[--third] border-transparent border-2 focus:border-[--second] transition-all duration-300 ease-in-out rounded-md px-2 outline-none" />
                     <input placeholder='Correo elctrónico' type="email" name="email" id="email" className="w-full p-4 pl-5 bg-[--third] border-transparent border-2 focus:border-[--second] transition-all duration-300 ease-in-out rounded-md px-2 outline-none" />
                     <textarea placeholder='Mensaje' name="message" id="message" className="w-full p-4 h-[150px] min-h-[150px] max-h-[300px] pl-5 bg-[--third] border-transparent border-2 focus:border-[--second] transition-all duration-300 ease-in-out rounded-md px-2 outline-none"></textarea>
-                    <input id='submitBtn' type="submit" value="Enviar" className="w-[140px] p-4 mt-4 bg-[--fourth] rounded-md transition-all hover:bg-[--fourth-blur]" />
+                    <input id='submitBtn' type="submit" value="Enviar" className="w-[140px] p-4 mt-4 bg-[--fourth] rounded-md transition-all hover:bg-[--fourth-blur] cursor-pointer" />
                 </form>
             </article>
             
