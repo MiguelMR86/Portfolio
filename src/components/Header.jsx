@@ -12,14 +12,15 @@ function Header() {
           <Photo />
         </div>
         <div className='flex flex-col items-center text-center gap-4 md:w-3/5 md:mt-10 md:mb-16'>
-          <p className=' text-gray-400'>
-          ¡Hola! Soy <span className='font-bold text-[--second]'>Miguel</span>, 
+          <p className='text-4xl '>
+          ¡Hola! Soy <span className='font-bold text-[--second]'>Miguel Medina</span>
           </p>
           <h1 className='text-3xl'>Desarrollador Full Stack</h1>
           <p className='text-gray-400'>
-            Transformo ideas en código, y código en productos.
+            Transformo ideas creativas en código en sólido.
           </p>
-          <a href={CV} download="CV-Miguel-Medina.pdf" className='w-[160px] bg-[--fourth] p-4 mt-2 rounded-md flex justify-center items-center'>
+          <a href={CV} download="CV-Miguel-Medina.pdf" className='w-[160px] bg-[--fourth] p-4 mt-2 rounded-md flex justify-center items-center hover:bg-[--fourth-blur] transition-all
+          '>
               Descargar CV
               <AiOutlineDownload className='ml-2' size={25} />
             </a>

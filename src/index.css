@@ -18,6 +18,8 @@
   --second-blur: rgba(5, 207, 90, 0.6);
   --third: #2f2f2f;
   --fourth: #47c756;
+  --fourth-blur: #25a534;
+  --fifth: #03478b;
   background: var(--first);
   color: white;
 }

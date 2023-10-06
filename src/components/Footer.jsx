@@ -15,13 +15,13 @@ function Footer() {
         <img src={Logo} alt="Logo" width={100} height={100} />
         <ul className='w-full flex justify-center items-center sm:justify-end flex-wrap gap-8 md:w-[800px]'>
           <li>
-            <button onClick={handleContactWithGithub} className='w-[140px] bg-[#adbac7] p-4 rounded-md flex justify-center items-center'>
+            <button onClick={handleContactWithGithub} className='w-[140px] bg-[#adbac7] p-4 rounded-md flex justify-center items-center transition-all hover:bg-[#798086]'>
               GitHub
               <AiFillGithub className='ml-2' size={25} />
             </button>
           </li>
           <li>
-            <button onClick={handleContactWithLinkedin} className='w-[140px] bg-[#0a66c2] p-4 rounded-md flex justify-center items-center'>
+            <button onClick={handleContactWithLinkedin} className='w-[140px] bg-[#0a66c2] p-4 rounded-md flex justify-center items-center transition-all hover:bg-[#03478b]'>
               Linkedin
               <AiFillLinkedin className='ml-2' size={25} />
             </button>
