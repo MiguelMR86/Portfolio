@@ -19,9 +19,9 @@ function Header() {
           <p className='text-gray-400'>
             Transformo ideas creativas en código en sólido.
           </p>
-          <a href={CV} download="CV-Miguel-Medina.pdf" className='w-[160px] bg-[--fourth] p-4 mt-2 rounded-md flex justify-center items-center hover:bg-[--fourth-blur] transition-all
+          <a href={CV} download="CV-Miguel-Medina.pdf" className='w-auto bg-[--fourth] p-4 mt-2 rounded-md flex justify-center items-center hover:bg-[--fourth-blur] transition-all
           '>
-              Descargar CV
+            <p>Descargar CV</p>
               <AiOutlineDownload className='ml-2' size={25} />
             </a>
         </div>
