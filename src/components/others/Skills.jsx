@@ -14,6 +14,7 @@ import { GrMysql } from "react-icons/gr";
 import { BiLogoPython } from "react-icons/bi";
 import { FaBootstrap } from "react-icons/fa";
 import { FaLaravel } from "react-icons/fa";
+import { GrDocker } from "react-icons/gr";
 
 export class skills extends Component {
     render() {
@@ -42,6 +43,7 @@ export class skills extends Component {
                             <FaNodeJs size={40} className="w-1/2 text-[#93c745]"/>
                             <BiLogoFirebase size={40} className="w-1/2 text-[#ffcd33]"/>
                             <SiExpress size={40} className="w-1/2"/>
+                            <GrDocker size={40} className="w-1/2 text-[#0db7ed]"/>
                             <LiaPhp size={40} className="w-1/2 text-[#7b7fb5]"/>
                             <GrMysql size={40} className="w-1/2 text-[#08668e]"/>
                             <BiLogoPython size={40} className="w-1/2 text-[#3776ab]"/>
