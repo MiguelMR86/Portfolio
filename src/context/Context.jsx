@@ -19,7 +19,7 @@ export function ContextProvider({ children, value: {...other} }) {
         'links': {
             'github': 'https://github.com/MiguelMR86/TaskHub',
             'web': 'https://taskhub-46037.web.app/',
-            'img': 'https://user-images.githubusercontent.com/90867675/259472945-caf02039-6d04-4551-8d75-f2e62cc5bd82.png'
+            'img': 'https://user-images.githubusercontent.com/90867675/285054889-e8d22814-c09c-4721-be08-0bf5dbf152c0.png'
         }
     },
     {

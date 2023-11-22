@@ -6,7 +6,7 @@ import CV from '../assets/CV-Miguel-Medina.pdf'
 
 function Header() {
   return (
-    <header id='home' className='w-full h-[100vh]'>
+    <header id='home' className='w-full h-[100vh]'>      
       <div className='flex h-full flex-col items-center w-full p-4 gap-y-8 md:flex-row-reverse md:gap-x-10'>
         <div className='md:w-2/5 md:mb-16'>
           <Photo />
@@ -19,8 +19,7 @@ function Header() {
           <p className='text-gray-400'>
             Transformo ideas creativas en código en sólido.
           </p>
-          <a href={CV} download="CV-Miguel-Medina.pdf" className='w-auto bg-[--fourth] p-4 mt-2 rounded-md flex justify-center items-center hover:bg-[--fourth-blur] transition-all
-          '>
+          <a href={CV} download="CV-Miguel-Medina.pdf" className='w-auto bg-[--fourth] p-4 mt-2 rounded-md flex justify-center items-center hover:bg-[--fourth-blur] transition-all'>
             <p>Descargar CV</p>
               <AiOutlineDownload className='ml-2' size={25} />
             </a>
