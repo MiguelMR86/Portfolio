@@ -1,20 +1,11 @@
 import React, { Component } from "react";
-import { BiLogoReact } from "react-icons/bi";
-import { FaVuejs } from "react-icons/fa";
+import { BiLogoReact, BiLogoHtml5, BiLogoTypescript, BiLogoTailwindCss, BiLogoFirebase, BiLogoPython } from "react-icons/bi";
+import { FaVuejs, FaLaravel, FaBootstrap, FaNodeJs } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
-import { BiLogoHtml5 } from "react-icons/bi";
 import { DiCss3 } from "react-icons/di";
-import { BiLogoTypescript } from "react-icons/bi";
-import { BiLogoTailwindCss } from "react-icons/bi";
-import { BiLogoFirebase } from "react-icons/bi";
-import { FaNodeJs } from "react-icons/fa";
 import { LiaPhp } from "react-icons/lia";
 import { SiExpress } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
-import { BiLogoPython } from "react-icons/bi";
-import { FaBootstrap } from "react-icons/fa";
-import { FaLaravel } from "react-icons/fa";
-import { GrDocker } from "react-icons/gr";
+import { GrMysql, GrDocker } from "react-icons/gr";
 
 export class skills extends Component {
     render() {
@@ -78,11 +69,6 @@ export class skills extends Component {
                                 </a>
                             </div>
                             <div className="w-1/2 grid place-items-center">
-                                <a href="https://firebase.google.com/">
-                                    <BiLogoFirebase size={40} className="text-[#ffcd33]" title="Firebase"/>
-                                </a>
-                            </div>
-                            <div className="w-1/2 grid place-items-center">
                                 <a href="https://www.php.net/">
                                     <LiaPhp size={40} className="text-[#7b7fb5]" title="Php"/>
                                 </a>
@@ -90,6 +76,11 @@ export class skills extends Component {
                             <div className="w-1/2 grid place-items-center">
                                 <a href="https://laravel.com/">
                                     <FaLaravel size={40} className="text-[#ff2d20]"  title="Laravel"/>
+                                </a>
+                            </div>
+                            <div className="w-1/2 grid place-items-center">
+                                <a href="https://firebase.google.com/">
+                                    <BiLogoFirebase size={40} className="text-[#ffcd33]" title="Firebase"/>
                                 </a>
                             </div>
                             <div className="w-1/2 grid place-items-center">
