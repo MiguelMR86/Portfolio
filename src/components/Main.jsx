@@ -6,13 +6,13 @@ import Contact from './others/Contact'
 
 function Main() {
   return (
-    <main className='w-full flex flex-col items-center'>
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+    <main className="w-full flex flex-col items-center">
+      <About />
+      <Projects />
+      <Skills />
+      <Contact />
     </main>
-  )
+  );
 }
 
 export default Main
