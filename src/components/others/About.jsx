@@ -7,10 +7,10 @@ function About() {
 
   return (
     <div id="about" className="w-full min-h-screen">
-      <div className="h-screen flex flex-col gap-y-4 p-4 text-center">
+      <div className="flex flex-col gap-y-4 p-4 text-center">
         <h2 className="font-bold text-3xl py-4 text-[--second]">Sobre Mí</h2>
-        <div className="md:flex md:justify-evenly items-center w-full m-auto">
-          <article className="w-full max-w-[500px] mx-auto xl:max-w-[600px]  h-full flex flex-col gap-y-8 text-left md:leading-[1.7]">
+        <div className="md:flex md:justify-evenly md:items-center w-full">
+          <article className="md:w-1/2 max-w-[500px] mx-auto xl:max-w-[600px]  h-full flex flex-col gap-y-8 text-left md:leading-[1.7]">
             <p>
               Soy un desarrollador Junior con ganas de incrementar mis actitudes
               y aptitudes. <br />
@@ -45,9 +45,8 @@ function About() {
         </div>
       </div>
 
-      <div className="min-h-screen md:flex md:justify-evenly items-center w-full m-auto">
-        <TalentusLogo />
-        <article className="w-full max-w-[500px] mx-auto xl:max-w-[600px]  h-full flex flex-col gap-y-8 text-left md:leading-[1.7]">
+      <div className="min-h-screen md:flex md:justify-evenly md:flex-row-reverse items-center w-full m-auto">
+        <article className="md:w-1/2 max-w-[500px] mx-auto xl:max-w-[600px]  h-full flex flex-col gap-y-8 text-left md:leading-[1.7]">
           <p>
             Actualmente, he comenzado una nueva etapa como Desarrollador
             Fullstack en Talentus. ¿Que es Talentus? Un portal de formación
@@ -70,6 +69,7 @@ function About() {
             de forma laboral y personal.
           </p>
         </article>
+        <TalentusLogo />
       </div>
     </div>
   );
