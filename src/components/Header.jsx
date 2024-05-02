@@ -1,66 +1,87 @@
-import React, { useContext } from "react";
-import { Context } from "../context/Context";
-import Photo from "./others/Photo";
-import { AiOutlineDownload } from "react-icons/ai";
-import CV from "../assets/CV-Miguel-Medina.pdf";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import Photo from "../assets/photo.png"
+import Button from "./buttons/Button"
+import SocialNetworks from "./sections/SocialNetowrks"
+import PersonalData from "./sections/PersonalData"
+// import CV from "../assets/CV-Miguel-Medina.pdf"
+import { MdOutlineFileDownload } from "react-icons/md"
+import PropTypes from "prop-types"
 
-function Header() {
-  const { handleContactWithGithub, handleContactWithLinkedin } =
-    useContext(Context);
+function Header(props) {
+  // const { handleContactWithGithub, handleContactWithLinkedin } =
+  //   useContext(Context);
 
   return (
-    <header id="home" className="w-full h-[100vh]">
-      <div className="flex h-full flex-col items-center w-full p-4 gap-y-8 md:flex-row-reverse md:gap-x-10">
-        <div className="md:w-2/5 md:mb-16">
-          <Photo />
-        </div>
+    <div
+      id="home"
+      className="relative w-full bg-primary rounded-xl mt-[100px] p-6 max-w-[350px] max-h-[600px] h-[calc(100vh-240px)]"
+    >
+      <figure className="flex items-end justify-center bg-[#516F83] rounded-xl w-[150px] h-[150px] absolute -top-24 left-1/2 transform -translate-x-1/2">
+        <img src={Photo} alt="Photo" className="h-36" />
+      </figure>
 
-        <div className="flex flex-col items-center text-center gap-4 md:w-3/5 md:mt-10 md:mb-16">
-          <h1 className="text-4xl md:text-5xl">
-            ¡Hola! Soy{" "}
-            <span className="font-bold text-[--second]">Miguel Medina</span>
-          </h1>
-          <p className="text-3xl md:text-4xl text-gray-300">
-            Desarrollador Full Stack
-          </p>
-          <p className="text-gray-500">
-            Transformo ideas creativas en código en sólido
-          </p>
-          <div>
-            <a
-              href={CV}
-              download="CV-Miguel-Medina.pdf"
-              className="w-full bg-[--fourth] p-4 mt-2 rounded-md flex justify-center items-center hover:bg-[--fourth-blur] transition-all"
-            >
-              <p>Descargar CV</p>
-              <AiOutlineDownload className="ml-2" size={25} />
-            </a>
-            <ul className="w-full flex justify-center items-center gap-4 mt-4">
-              <li>
-                <button
-                  onClick={handleContactWithGithub}
-                  className="w-[140px] bg-[#adbac7] p-4 rounded-md flex justify-center items-center transition-all hover:bg-[#798086]"
-                >
-                  GitHub
-                  <AiFillGithub className="ml-2" size={25} />
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={handleContactWithLinkedin}
-                  className="w-[140px] bg-[#0a66c2] p-4 rounded-md flex justify-center items-center transition-all hover:bg-[#03478b]"
-                >
-                  Linkedin
-                  <AiFillLinkedin className="ml-2" size={25} />
-                </button>
-              </li>
-            </ul>
+      <div
+        className="flex flex-col items-center justify-between gap-5 mt-12 text-center overflow-auto"
+        style={{
+          height: "calc(100% - 2.8rem)",
+        }}
+      >
+        <div className="flex flex-col items-center gap-3">
+          <h1 className="text-3xl font-bold text-white">Miguel Medina</h1>
+          <div className="bg-button rounded-lg w-fit px-4 py-2">
+            <p className="text-white text-xs">Full Stack Developer</p>
+          </div>
+
+          <div className="flex items-center w-24 h-10 gap-4">
+            {SocialNetworks.map((network, index) => {
+              const { icon, link } = network
+
+              return (
+                <Button
+                  key={index}
+                  Icon={icon}
+                  iconSize={20}
+                  className="w-[40px] h-[40px] rounded-md"
+                  onClick={() => window.open(link, "_blank")}
+                />
+              )
+            })}
           </div>
         </div>
+
+        <div className="flex flex-col gap-4 text-white bg-settings p-6 rounded-xl w-full">
+          {PersonalData.map((data, index) => {
+            const { icon, title, content, iconColor } = data
+
+            return (
+              <div key={index} className="flex gap-3 items-center">
+                <Button
+                  Icon={icon}
+                  iconSize={20}
+                  iconColor={iconColor}
+                  className={`w-[40px] h-[40px] rounded-md bg-primary shadow`}
+                />
+                <div className="text-left flex flex-col">
+                  <small className="font-bold text-default/50">{title}</small>
+                  <p className=" font-medium">{content}</p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        <div>
+          <a
+            // href={CV}
+            download="Miguel Medina CV"
+            className="text-button text-mb rounded-lg w-fit p-4 flex items-center gap-2 cursor-pointer bg-button-focus hover:bg-button-focus/80 transition-all duration-300 ease-in-out"
+          >
+            <MdOutlineFileDownload size={24} />
+            <p className="text-white">Descargar CV</p>
+          </a>
+        </div>
       </div>
-    </header>
-  );
+    </div>
+  )
 }
 
-export default Header;
+export default Header
