@@ -9,7 +9,7 @@ import { IoCodeSlash } from "react-icons/io5"
 import { TbTournament } from "react-icons/tb"
 
 const About = () => {
-  const { scrollToTopSmoothById } = useContext(Context)
+  const { scrollSmooth } = useContext(Context)
 
   const width = "w-full max-w-[350px] md:max-w-full"
   const height = "h-[calc(100vh-240px)] max-h-[600px]"
@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div
       id="about-main"
-      className={`relative w-full bg-primary rounded-xl mt-[100px] md:mt-0 p-6 ${width} ${height}`}
+      className={`relative w-full bg-primary rounded-xl mt-[100px] md:mt-0 p-10 ${width} ${height}`}
     >
       <SectionTitle title="About" />
       <div className="overflow-y-auto  h-[calc(100%-10.5%)]">
@@ -66,7 +66,7 @@ const About = () => {
       <ScrollToButton
         className="absolute bottom-[1.4em] right-5 p-3 bg-white rounded-lg shadow-default/30 shadow-md md:hidden"
         Icon={<IoIosArrowUp size={24} />}
-        onClick={() => scrollToTopSmoothById("about-header")}
+        onClick={() => scrollSmooth("top")}
       />
     </div>
   )

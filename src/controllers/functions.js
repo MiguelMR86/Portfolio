@@ -17,9 +17,9 @@ export const handleContactWithGithub = () => {
   window.open("https://github.com/MiguelMR86")
 }
 
-export const scrollToTopSmoothById = (id) => {
+export const scrollSmooth = (value) => {
   window.scrollTo({
-    top: document.getElementById(id).offsetTop,
+    top: value === "top" ? 0 : document.body.scrollHeight,
     behavior: "smooth",
   })
 }

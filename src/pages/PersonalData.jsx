@@ -9,11 +9,8 @@ import { MdOutlineFileDownload } from "react-icons/md"
 import { IoIosArrowDown } from "react-icons/io"
 
 function PersonalData() {
-  const {
-    handleContactWithGithub,
-    handleContactWithLinkedin,
-    scrollToTopSmoothById,
-  } = useContext(Context)
+  const { handleContactWithGithub, handleContactWithLinkedin, scrollSmooth } =
+    useContext(Context)
 
   const width = "w-[300px] xs:w-[350px]"
   const height = "h-[calc(100vh-240px)] max-h-[600px]"
@@ -64,7 +61,7 @@ function PersonalData() {
         <ScrollToButton
           className="absolute bottom-[1.4em] right-5 p-3 bg-white rounded-lg shadow-default/30 shadow-md md:hidden"
           Icon={<IoIosArrowDown size={24} />}
-          onClick={() => scrollToTopSmoothById("about-main")}
+          onClick={() => scrollSmooth()}
         />
       </div>
     </div>

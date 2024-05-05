@@ -10,19 +10,18 @@ import { LuGraduationCap } from "react-icons/lu"
 import { IoBriefcaseOutline } from "react-icons/io5"
 
 const Resume = () => {
-  const { scrollToTopSmoothById } = useContext(Context)
+  const { scrollSmooth } = useContext(Context)
 
   const width = "w-full max-w-[350px] md:max-w-full"
   const height = "h-[calc(100vh-240px)] max-h-[600px]"
 
   return (
     <div
-      id="about-main"
       className={`relative w-full bg-primary rounded-xl mt-[100px] md:mt-0 p-10 ${width} ${height}`}
     >
       <SectionTitle title="Trayectoria" />
 
-      <div className="flex gap-8 mt-6 overflow-y-auto h-[calc(100%-68px)]">
+      <div className="md:flex gap-8 mt-6 overflow-y-auto h-[calc(100%-68px)]">
         <div>
           <div className="flex items-center gap-2 mb-4">
             <LuGraduationCap size={30} color="#0b73e1" />
@@ -111,7 +110,7 @@ const Resume = () => {
       <ScrollToButton
         className="absolute bottom-[1.4em] right-5 p-3 bg-white rounded-lg shadow-default/30 shadow-md md:hidden"
         Icon={<IoIosArrowUp size={24} />}
-        onClick={() => scrollToTopSmoothById("about-header")}
+        onClick={() => scrollSmooth("top")}
       />
     </div>
   )
