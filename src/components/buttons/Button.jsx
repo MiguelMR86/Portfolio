@@ -3,7 +3,7 @@ import { useContext } from "react"
 import PropTypes from "prop-types"
 
 const Button = (props) => {
-  const { Icon, iconSize = 23, iconColor, section, className, onClick } = props
+  const { Icon, section, className, onClick } = props
   const { currentSection } = useContext(Context)
 
   const currentSectionStyle =
@@ -16,21 +16,14 @@ const Button = (props) => {
       onClick={onClick}
       className={`${currentSectionStyle} ${className} flex flex-col items-center justify-center text-default bg-button transition-all duration-300 ease-in-out cursor-pointer`}
     >
-      <Icon
-        size={iconSize}
-        style={{
-          color: iconColor,
-        }}
-      />
+      {Icon}
       {section && <p className="text-xs  md:block">{section}</p>}
     </button>
   )
 }
 
 Button.propTypes = {
-  Icon: PropTypes.func.isRequired,
-  iconSize: PropTypes.number,
-  iconColor: PropTypes.string,
+  Icon: PropTypes.element.isRequired,
   section: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,

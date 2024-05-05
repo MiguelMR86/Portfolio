@@ -2,45 +2,45 @@ import { useContext } from "react"
 import { Context } from "../../context/Context"
 import Button from "../buttons/Button"
 import { BsPerson } from "react-icons/bs"
-import { AiOutlineFolderOpen, AiOutlineMessage } from "react-icons/ai"
+import { AiOutlineMessage } from "react-icons/ai"
 import { GrDocumentText } from "react-icons/gr"
-import { IoBriefcaseOutline } from "react-icons/io5"
+import { TbTemplate } from "react-icons/tb"
 
 const MenuSections = () => {
   const { setCurrentSection } = useContext(Context)
 
   const menuSections = [
     {
-      Icon: BsPerson,
+      Icon: <BsPerson size={30} />,
       section: "About",
     },
     {
-      Icon: GrDocumentText,
+      Icon: <GrDocumentText size={30} />,
       section: "Resume",
     },
-    // {
-    //   Icon: AiOutlineFolderOpen,
-    //   section: "Projects",
-    // },
+
     {
-      Icon: IoBriefcaseOutline,
-      section: "Work",
+      Icon: <TbTemplate size={30} />,
+      section: "Projects",
     },
     {
-      Icon: AiOutlineMessage,
+      Icon: <AiOutlineMessage size={30} />,
       section: "Contact",
     },
   ]
 
-  return menuSections.map((item, index) => (
-    <Button
-      key={index}
-      Icon={item.Icon}
-      section={item.section}
-      onClick={() => setCurrentSection(item.section)}
-      className="w-[60px] h-[60px]  rounded-lg"
-    />
-  ))
+  return menuSections.map((item, index) => {
+    const { Icon, section } = item
+    return (
+      <Button
+        key={index}
+        Icon={Icon}
+        section={section}
+        onClick={() => setCurrentSection(item.section)}
+        className="w-[60px] h-[60px] rounded-lg font-bold"
+      />
+    )
+  })
 }
 
 export default MenuSections

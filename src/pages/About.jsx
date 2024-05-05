@@ -65,7 +65,7 @@ const About = () => {
 
       <ScrollToButton
         className="absolute bottom-[1.4em] right-5 p-3 bg-white rounded-lg shadow-default/30 shadow-md md:hidden"
-        Icon={() => <IoIosArrowUp size={24} />}
+        Icon={<IoIosArrowUp size={24} />}
         onClick={() => scrollToTopSmoothById("about-header")}
       />
     </div>

@@ -9,7 +9,7 @@ const ScrollToButton = (props) => {
 }
 
 ScrollToButton.propTypes = {
-  Icon: PropTypes.func.isRequired,
+  Icon: PropTypes.element.isRequired,
   className: PropTypes.string,
   onClick: PropTypes.func,
 }

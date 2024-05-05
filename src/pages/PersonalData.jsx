@@ -4,7 +4,6 @@ import photo from "../assets/Photo.png"
 import SocialNetworks from "../components/sections/SocialNetowrks"
 import PersonalDataInfo from "../components/sections/PersonalDataInfo"
 import CV from "../assets/CV-Miguel-Medina.pdf"
-import Button from "../components/buttons/Button"
 import ScrollToButton from "../components/buttons/ScrollToButton"
 import { MdOutlineFileDownload } from "react-icons/md"
 import { IoIosArrowDown } from "react-icons/io"
@@ -64,7 +63,7 @@ function PersonalData() {
 
         <ScrollToButton
           className="absolute bottom-[1.4em] right-5 p-3 bg-white rounded-lg shadow-default/30 shadow-md md:hidden"
-          Icon={() => <IoIosArrowDown size={24} />}
+          Icon={<IoIosArrowDown size={24} />}
           onClick={() => scrollToTopSmoothById("about-main")}
         />
       </div>

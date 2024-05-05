@@ -6,11 +6,11 @@ import Button from "../buttons/Button"
 function SocialNetworks() {
   const socialNetworks = [
     {
-      icon: FaLinkedin,
+      icon: <FaLinkedin size={20} />,
       link: "https://www.linkedin.com/in/miguelmr86/",
     },
     {
-      icon: FaGithub,
+      icon: <FaGithub size={20} />,
       link: "https://github.com/MiguelMR86",
     },
   ]
@@ -22,7 +22,6 @@ function SocialNetworks() {
       <Button
         key={index}
         Icon={icon}
-        iconSize={20}
         className="w-[40px] h-[40px] rounded-md"
         onClick={() => window.open(link, "_blank")}
       />
