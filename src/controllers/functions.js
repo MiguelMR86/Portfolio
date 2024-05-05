@@ -23,3 +23,7 @@ export const scrollSmooth = (value) => {
     behavior: "smooth",
   })
 }
+
+export const is_mobile = () => {
+  return window.innerWidth <= 768
+}

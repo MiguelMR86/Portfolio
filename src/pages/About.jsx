@@ -12,12 +12,12 @@ const About = () => {
   const { scrollSmooth } = useContext(Context)
 
   const width = "w-full max-w-[350px] md:max-w-full"
-  const height = "h-[calc(100vh-240px)] max-h-[600px]"
+  const height = "max-h-[700px]  md:h-[calc(100vh-240px)] md:max-h-[600px]"
 
   return (
     <div
       id="about-main"
-      className={`relative w-full bg-primary rounded-xl mt-[100px] md:mt-0 p-10 ${width} ${height}`}
+      className={`relative w-full bg-primary rounded-xl mt-5 md:mt-0 p-10 ${width} ${height}`}
     >
       <SectionTitle title="About" />
       <div className="overflow-y-auto  h-[calc(100%-10.5%)]">

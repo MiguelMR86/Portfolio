@@ -6,20 +6,29 @@ import { Context } from "./context/Context"
 import { useContext } from "react"
 
 function App() {
-  const { currentSection } = useContext(Context)
+  const { currentSection, is_mobile } = useContext(Context)
 
   return (
-    <div className="w-full min-h-screen relative md:flex md:justify-center">
-      <div className="md:w-fit h-screen flex justify-center md:items-center pt-5 px-5">
-        <PersonalData />
-      </div>
-      {(currentSection === "About" || !currentSection) && (
-        <div className="md:w-3/5 h-screen flex justify-center md:items-center pt-5 px-5">
-          <About />
+    <div className="w-full min-h-screen relative md:flex md:justify-center md:gap-8 px-5">
+      {!is_mobile() && (
+        <div className="md:w-fit h-screen flex justify-center items-center">
+          <PersonalData />
         </div>
       )}
+      {(currentSection === "About" || !currentSection) && (
+        <>
+          {is_mobile() && (
+            <div className="md:w-fit h-screen flex justify-center md:items-center">
+              <PersonalData />
+            </div>
+          )}
+          <div className="md:w-3/5 h-screen flex justify-center md:items-center">
+            <About />
+          </div>
+        </>
+      )}
       {currentSection === "Resume" && (
-        <div className="md:w-3/5 h-screen flex justify-center md:items-center pt-5 px-5">
+        <div className="md:w-3/5 h-screen flex justify-center md:items-center">
           <Resume />
         </div>
       )}

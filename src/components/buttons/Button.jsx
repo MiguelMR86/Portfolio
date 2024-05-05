@@ -4,17 +4,11 @@ import PropTypes from "prop-types"
 
 const Button = (props) => {
   const { Icon, section, className, onClick } = props
-  const { currentSection } = useContext(Context)
-
-  const currentSectionStyle =
-    currentSection === section
-      ? "bg-button-focus text-focus"
-      : "hover:bg-button-hover"
 
   return (
     <button
       onClick={onClick}
-      className={`${currentSectionStyle} ${className} flex flex-col items-center justify-center text-default bg-button transition-all duration-300 ease-in-out cursor-pointer`}
+      className={`${className} flex flex-col items-center justify-center text-default bg-button transition-all duration-300 ease-in-out cursor-pointer`}
     >
       {Icon}
       {section && <p className="text-xs  md:block">{section}</p>}

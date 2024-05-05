@@ -17,7 +17,7 @@ function PersonalData() {
 
   return (
     <div
-      className={`relative bg-primary rounded-xl mt-[100px] md:mt-0 p-6 ${width} ${height}`}
+      className={`relative bg-primary rounded-xl mt-[120px] md:mt-0 p-6 ${width} ${height}`}
     >
       <figure
         id="about-header"
