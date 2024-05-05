@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { Context } from "../context/Context"
 import photo from "../assets/Photo.png"
 import SocialNetworks from "../components/sections/SocialNetowrks"
-import personalData from "../components/sections/personalData"
+import PersonalData from "../components/sections/PersonalData"
 import CV from "../assets/CV-Miguel-Medina.pdf"
 import Button from "../components/buttons/Button"
 import ScrollToButton from "../components/buttons/ScrollToButton"
@@ -48,26 +48,7 @@ function PersonalData() {
         </div>
 
         <div className="flex flex-col gap-4  bg-settings p-6 rounded-xl w-full">
-          {personalData.map((data, index) => {
-            const { icon, title, content, iconColor } = data
-
-            return (
-              <div key={index} className="flex gap-3 items-center">
-                <Button
-                  Icon={icon}
-                  iconSize={20}
-                  iconColor={iconColor}
-                  className={`w-[40px] h-[40px] rounded-md bg-primary shadow`}
-                />
-                <div className="text-left flex flex-col w-4/5">
-                  <small className="font-bold text-default/50">{title}</small>
-                  <p className="font-medium truncate" title={content}>
-                    {content}
-                  </p>
-                </div>
-              </div>
-            )
-          })}
+          <PersonalData />
         </div>
 
         <div>
