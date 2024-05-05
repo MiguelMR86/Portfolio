@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { Context } from "../context/Context"
 import photo from "../assets/Photo.png"
-import socialNetworks from "../components/sections/socialNetowrks"
+import SocialNetworks from "../components/sections/SocialNetowrks"
 import personalData from "../components/sections/personalData"
 import CV from "../assets/CV-Miguel-Medina.pdf"
 import Button from "../components/buttons/Button"
@@ -43,19 +43,7 @@ function PersonalData() {
           </div>
 
           <div className="flex items-center w-24 h-10 gap-4">
-            {socialNetworks.map((network, index) => {
-              const { icon, link } = network
-
-              return (
-                <Button
-                  key={index}
-                  Icon={icon}
-                  iconSize={20}
-                  className="w-[40px] h-[40px] rounded-md"
-                  onClick={() => window.open(link, "_blank")}
-                />
-              )
-            })}
+            <SocialNetworks />
           </div>
         </div>
 
