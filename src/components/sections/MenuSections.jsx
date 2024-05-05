@@ -6,10 +6,9 @@ import { AiOutlineFolderOpen, AiOutlineMessage } from "react-icons/ai"
 import { GrDocumentText } from "react-icons/gr"
 import { IoBriefcaseOutline } from "react-icons/io5"
 
-import React from "react"
-const { setCurrentSection } = useContext(Context)
-
 const MenuSections = () => {
+  const { setCurrentSection } = useContext(Context)
+
   const menuSections = [
     {
       Icon: BsPerson,
@@ -32,6 +31,7 @@ const MenuSections = () => {
       section: "Contact",
     },
   ]
+
   return menuSections.map((item, index) => (
     <Button
       key={index}

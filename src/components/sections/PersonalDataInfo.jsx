@@ -2,6 +2,7 @@ import { HiDevicePhoneMobile } from "react-icons/hi2"
 import { IoMailOpenOutline } from "react-icons/io5"
 import { FaLocationDot } from "react-icons/fa6"
 import { LiaBirthdayCakeSolid } from "react-icons/lia"
+import Button from "../buttons/Button"
 
 function PersonalDataInfo() {
   const personalData = [
