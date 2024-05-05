@@ -1,7 +1,7 @@
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 
-const SocialNetworks = [
+const socialNetworks = [
   {
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/miguelmr86/",
@@ -12,4 +12,4 @@ const SocialNetworks = [
   },
 ]
 
-export default SocialNetworks
+export default socialNetworks

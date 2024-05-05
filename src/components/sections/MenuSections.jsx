@@ -3,7 +3,7 @@ import { AiOutlineFolderOpen, AiOutlineMessage } from "react-icons/ai"
 import { GrDocumentText } from "react-icons/gr"
 import { IoBriefcaseOutline } from "react-icons/io5"
 
-const MenuSections = [
+const menuSections = [
   {
     Icon: BsPerson,
     section: "About",
@@ -26,4 +26,4 @@ const MenuSections = [
   },
 ]
 
-export default MenuSections
+export default menuSections

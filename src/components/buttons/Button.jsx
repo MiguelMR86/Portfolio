@@ -14,7 +14,7 @@ const Button = (props) => {
   return (
     <button
       onClick={onClick}
-      className={`${currentSectionStyle} ${className} flex flex-col items-center justify-center text-default bg-button rounded-xl transition-all duration-300 ease-in-out cursor-pointer`}
+      className={`${currentSectionStyle} ${className} flex flex-col items-center justify-center text-default bg-button transition-all duration-300 ease-in-out cursor-pointer`}
     >
       <Icon
         size={iconSize}

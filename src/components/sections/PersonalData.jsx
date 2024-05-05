@@ -3,7 +3,7 @@ import { IoMailOpenOutline } from "react-icons/io5"
 import { FaLocationDot } from "react-icons/fa6"
 import { LiaBirthdayCakeSolid } from "react-icons/lia"
 
-const PersonalData = [
+const personalData = [
   {
     title: "Teléfono",
     content: "+34 645 95 72 29",
@@ -30,4 +30,4 @@ const PersonalData = [
   },
 ]
 
-export default PersonalData
+export default personalData
