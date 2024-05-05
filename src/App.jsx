@@ -10,18 +10,16 @@ function App() {
 
   return (
     <div className="w-full min-h-screen relative md:flex md:justify-center">
+      <div className="md:w-fit h-screen flex justify-center md:items-center pt-5 px-5">
+        <PersonalData />
+      </div>
       {(currentSection === "About" || !currentSection) && (
-        <>
-          <div className="md:w-fit h-screen flex justify-center md:items-center pt-5 px-5">
-            <PersonalData />
-          </div>
-          <div className="md:w-2/4 h-screen flex justify-center md:items-center pt-5 px-5">
-            <About />
-          </div>
-        </>
+        <div className="md:w-3/5 h-screen flex justify-center md:items-center pt-5 px-5">
+          <About />
+        </div>
       )}
       {currentSection === "Resume" && (
-        <div className="md:w-2/4 h-screen flex justify-center md:items-center pt-5 px-5">
+        <div className="md:w-3/5 h-screen flex justify-center md:items-center pt-5 px-5">
           <Resume />
         </div>
       )}
