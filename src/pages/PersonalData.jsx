@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { Context } from "../context/Context"
-import photo from "../assets/photo.png"
+import photo from "../assets/Photo.png"
 import socialNetworks from "../components/sections/socialNetowrks"
 import personalData from "../components/sections/personalData"
 import CV from "../assets/CV-Miguel-Medina.pdf"
