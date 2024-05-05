@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { Context } from "../context/Context"
 import photo from "../assets/Photo.png"
 import SocialNetworks from "../components/sections/SocialNetowrks"
-import PersonalData from "../components/sections/PersonalData"
+import PersonalDataInfo from "../components/sections/PersonalDataInfo"
 import CV from "../assets/CV-Miguel-Medina.pdf"
 import Button from "../components/buttons/Button"
 import ScrollToButton from "../components/buttons/ScrollToButton"
@@ -48,7 +48,7 @@ function PersonalData() {
         </div>
 
         <div className="flex flex-col gap-4  bg-settings p-6 rounded-xl w-full">
-          <PersonalData />
+          <PersonalDataInfo />
         </div>
 
         <div>
