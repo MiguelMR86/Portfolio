@@ -7,7 +7,7 @@ import { IoBriefcaseOutline } from "react-icons/io5"
 
 const Resume = () => {
   const width = "w-full max-w-[350px] md:max-w-full"
-  const height = "max-h-[700px]  md:h-[calc(100vh-240px)] md:max-h-[600px]"
+  const height = "h-[calc(100%-152px)] md:h-[calc(100%-270px)] md:max-h-[650px]"
 
   return (
     <div

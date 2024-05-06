@@ -13,7 +13,9 @@ function PersonalData() {
     useContext(Context)
 
   const width = "w-[300px] xs:w-[350px]"
-  const height = "h-[calc(100vh-240px)] max-h-[600px]"
+  const height = "h-[calc(100%-252px)] md:h-[calc(100%-270px)] max-h-[650px]"
+
+  // const height = "h-[calc(100vh-240px)] max-h-[600px]"
 
   return (
     <div
@@ -27,9 +29,9 @@ function PersonalData() {
       </figure>
 
       <div
-        className="flex flex-col items-center justify-between gap-5 mt-12 text-center overflow-auto"
+        className="h-[calc(100%-2.8rem)] flex flex-col items-center justify-between gap-5 mt-12 text-center overflow-auto"
         style={{
-          height: "calc(100% - 2.8rem)",
+          height: "",
         }}
       >
         <div className="flex flex-col items-center gap-3">
