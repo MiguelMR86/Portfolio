@@ -20,7 +20,7 @@ const About = () => {
       className={`relative w-full bg-primary rounded-xl mt-5 md:mt-0 p-10 ${width} ${height}`}
     >
       <SectionTitle title="About" />
-      <div className="overflow-y-auto  h-[calc(100%-2.8rem)]">
+      <div className="overflow-y-auto  h-[calc(100%-68px)]">
         <SectionDescription description="Soy un Desarrollador Full Stack al que le encanta transformar ideas creativas en código sólido. Como desarrollador, busco crear soluciones escalables que mejoren la experiencia del usuario." />
 
         <div className="mt-6">
