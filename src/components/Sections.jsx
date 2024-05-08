@@ -13,13 +13,13 @@ const Sections = () => {
           <div className="md:hidden md:w-fit h-screen flex justify-center md:items-center">
             <PersonalData />
           </div>
-          <div className="md:w-3/5 h-screen flex justify-center md:items-center">
+          <div className="md:w-3/6 h-screen flex justify-center md:items-center">
             <About />
           </div>
         </>
       )}
       {currentSection === "Resume" && (
-        <div className="md:w-3/5 h-screen flex justify-center md:items-center">
+        <div className="md:w-3/6 h-screen flex justify-center md:items-center">
           <Resume />
         </div>
       )}

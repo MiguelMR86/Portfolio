@@ -24,11 +24,11 @@ const About = () => {
         <SectionDescription description="Soy un Desarrollador Full Stack al que le encanta transformar ideas creativas en código sólido. Como desarrollador, busco crear soluciones escalables que mejoren la experiencia del usuario." />
 
         <div className="mt-6">
-          <h2 className="font-semibold text-2xl mb-4">What I do?</h2>
+          <h2 className="font-semibold text-2xl mb-4">¿A qué me dedico?</h2>
           <div className="flex flex-col gap-4 pb-16 xl:flex-row">
             <Card
               title="Full-Stack"
-              className={"bg-sky-100/60"}
+              className={"md:h-[210px] xl:h-[210px]"}
               icon={<IoCodeSlash size={35} color="#7F4AA6" />}
               children={
                 <div>
@@ -48,7 +48,7 @@ const About = () => {
 
             <Card
               title="SEO"
-              className={"bg-sky-100/60"}
+              className={"md:h-[210px] xl:h-[210px]"}
               icon={<TbTournament size={30} color="#e2c060" />}
               children={
                 <div>
