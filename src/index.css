@@ -23,3 +23,17 @@
 .test {
   color: #76e260;
 }
+
+input,
+textarea {
+  border: 2px solid #bebebe;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #747373;
+}
+
+textarea {
+  resize: none;
+}
