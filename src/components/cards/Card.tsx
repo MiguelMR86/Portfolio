@@ -5,7 +5,7 @@ function Card(props) {
   const { icon, title, children, className, style } = props
   return (
     <div
-      className={`bg-sky-100/60 h-[210px] md:h-[185px] lg:h-[185px] xl:h-[170px] p-4 rounded-xl ${className}`}
+      className={`bg-sky-100/60 h-[250px] md:h-[250px] lg:h-[185px] xl:h-[250px] xl:max-w-[350px] p-4 rounded-xl ${className}`}
       style={style}
     >
       {(title || icon) && (
