@@ -29,20 +29,135 @@ const Resume = () => {
       <SectionTitle title="Resume" />
 
       <div className="xl:flex xl:justify-between gap-8 bg-red-00 mt-6 h-[calc(100%-68px)] overflow-y-auto">
-        <div className="xl:overflow-y-auto mb-20 xl:mb-0">
+        <div className="">
           <div className="flex items-center gap-2 mb-4">
-            <LuGraduationCap size={30} color="#0b73e1" />
-            <h2 className="font-semibold text-2xl">Educación</h2>
+            <IoBriefcaseOutline size={25} color="#0b73e1" />
+            <h2 className="font-semibold text-2xl">Experiencia</h2>
           </div>
-          <div className="flex flex-col gap-4 overflow-y-auto">
+          <div className="flex flex-col gap-4">
             <Card
               children={
                 <>
                   <div>
                     <p className="font-semibold text-[16px]">
-                      Ciclo Superior - Desarrollo de Aplicaciones Web
+                      Talentus - Desarrollador Web Full-Stack
                     </p>
-                    <p className="font-semibold text-gray-500">2021 - 2023</p>
+                    <p className="font-semibold text-gray-500">
+                      Enero 2024 - Actualidad
+                    </p>
+                    <p className="mb-2 text-gray-500">
+                      Encargado del diseño y desarrollo de nuevas
+                      funcionalidades, además del mantenimiento del aplicativo.
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-4 overflow-x-auto ">
+                    <img
+                      src={ReactLogo}
+                      alt="React Logo"
+                      title="React Logo"
+                      className="w-8 h-8"
+                    />
+                    <img
+                      src={TypeScriptLogo}
+                      alt="TypeScript Logo"
+                      title="TypeScript Logo"
+                      className="w-8 h-8"
+                    />
+                    <img
+                      src={TailwindLogo}
+                      alt="Tailwind Logo"
+                      title="Tailwind Logo"
+                      className="w-8 h-8"
+                    />
+                    <img
+                      src={PythonLogo}
+                      alt="Python Logo"
+                      title="Python Logo"
+                      className="w-8 h-8"
+                    />
+                    <img
+                      src={DjangoLogo}
+                      alt="Django Logo"
+                      title="Django Logo"
+                      className="w-13 h-8"
+                    />
+                    <img
+                      src={PostgreSQLogo}
+                      alt="PostgreSQL"
+                      title="PostgreSQL Logo"
+                      className="w-13 h-8"
+                    />
+                  </div>
+                </>
+              }
+            />
+            <Card
+              children={
+                <>
+                  <div>
+                    <p className="font-semibold text-[16px]">
+                      Strategiczni.pl - Desarrollador Web Front-end
+                    </p>
+                    <p className="font-semibold text-gray-500">
+                      Marzo 2023 - Junio 2023
+                    </p>
+                    <p className="mb-2 text-gray-500">
+                      ( Prácticas de ciclo superior ) Diseño desarrollo y
+                      creación paginas Wordepress, Bug fixing y keywords
+                      research ( SEO ).
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-4 overflow-x-auto ">
+                    <img
+                      src={NodeLogo}
+                      alt="Node.js"
+                      title="Node.js Logo"
+                      className="w-8 h-8"
+                    />
+                    <img
+                      src={JavaScriptLogo}
+                      alt="JavaScript Logo"
+                      title="JavaScript Logo"
+                      className="w-8 h-8"
+                    />
+                    <img
+                      src={ExpressLogo}
+                      alt="Express Logo"
+                      title="Express Logo"
+                      className="w-8 h-8"
+                    />
+                    <img
+                      src={PHPLogo}
+                      alt="PHP Logo"
+                      title="PHP Logo"
+                      className="w-9 h-6"
+                    />
+                  </div>
+                </>
+              }
+            />
+          </div>
+        </div>
+        <hr className="border h-fit mb-10 xl:h-full " />
+
+        <div className="mb-20 xl:mb-0">
+          <div className="flex items-center gap-2 mb-4">
+            <LuGraduationCap size={30} color="#0b73e1" />
+            <h2 className="font-semibold text-2xl">Educación</h2>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Card
+              children={
+                <>
+                  <div>
+                    <p className="font-semibold text-[16px]">
+                      Ciclo Superior - Desarrollo de Aplicaciones Web ( DAW )
+                    </p>
+                    <p className="font-semibold text-gray-500">
+                      Septiembre 2021 - Junio 2023
+                    </p>
                     <p className="mb-2 text-gray-500">IES Ana Luisa Benítez</p>
                   </div>
 
@@ -94,116 +209,6 @@ const Resume = () => {
                       alt="Bootstrap Logo"
                       title="Bootstrap Logo"
                       className="w-8 h-8"
-                    />
-                  </div>
-                </>
-              }
-            />
-          </div>
-        </div>
-
-        <hr className="border h-full " />
-
-        <div className="xl:overflow-y-auto">
-          <div className="flex items-center gap-2 mb-4">
-            <IoBriefcaseOutline size={25} color="#0b73e1" />
-            <h2 className="font-semibold text-2xl">Experiencia</h2>
-          </div>
-          <div className="flex flex-col gap-4">
-            <Card
-              children={
-                <>
-                  <div>
-                    <p className="font-semibold text-[16px]">
-                      Strategiczni.pl - Desarrollador Web Front-end
-                    </p>
-                    <p className="font-semibold text-gray-500">
-                      Marzo 2023 - Junio 2023
-                    </p>
-                    <p className="mb-2 text-gray-500">
-                      Prácticas del ciclo superior
-                    </p>
-                  </div>
-
-                  <div className="flex items-center gap-4 overflow-x-auto ">
-                    <img
-                      src={NodeLogo}
-                      alt="Node.js"
-                      title="Node.js Logo"
-                      className="w-8 h-8"
-                    />
-                    <img
-                      src={JavaScriptLogo}
-                      alt="JavaScript Logo"
-                      title="JavaScript Logo"
-                      className="w-8 h-8"
-                    />
-                    <img
-                      src={ExpressLogo}
-                      alt="Express Logo"
-                      title="Express Logo"
-                      className="w-8 h-8"
-                    />
-                    <img
-                      src={PHPLogo}
-                      alt="PHP Logo"
-                      title="PHP Logo"
-                      className="w-9 h-6"
-                    />
-                  </div>
-                </>
-              }
-            />
-
-            <Card
-              children={
-                <>
-                  <div>
-                    <p className="font-semibold text-[16px]">
-                      Talentus - Desarrollador Web Full-Stack
-                    </p>
-                    <p className="font-semibold text-gray-500">
-                      Enero 2024 - Actualidad
-                    </p>
-                    <p className="mb-2 text-gray-500">Desarrollador</p>
-                  </div>
-
-                  <div className="flex items-center gap-4 overflow-x-auto ">
-                    <img
-                      src={ReactLogo}
-                      alt="React Logo"
-                      title="React Logo"
-                      className="w-8 h-8"
-                    />
-                    <img
-                      src={TypeScriptLogo}
-                      alt="TypeScript Logo"
-                      title="TypeScript Logo"
-                      className="w-8 h-8"
-                    />
-                    <img
-                      src={TailwindLogo}
-                      alt="Tailwind Logo"
-                      title="Tailwind Logo"
-                      className="w-8 h-8"
-                    />
-                    <img
-                      src={PythonLogo}
-                      alt="Python Logo"
-                      title="Python Logo"
-                      className="w-8 h-8"
-                    />
-                    <img
-                      src={DjangoLogo}
-                      alt="Django Logo"
-                      title="Django Logo"
-                      className="w-13 h-8"
-                    />
-                    <img
-                      src={PostgreSQLogo}
-                      alt="PostgreSQL"
-                      title="PostgreSQL Logo"
-                      className="w-13 h-8"
                     />
                   </div>
                 </>
