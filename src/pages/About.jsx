@@ -1,12 +1,12 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
 import { Context } from "../context/Context"
 import SectionTitle from "../components/SectionTitle"
 import SectionDescription from "../components/SectionDescription"
 import Card from "../components/cards/Card"
 import ScrollToButton from "../components/buttons/ScrollToButton"
 import { IoIosArrowUp } from "react-icons/io"
-import { IoCodeSlash } from "react-icons/io5"
-import { TbTournament } from "react-icons/tb"
+import { BiServer } from "react-icons/bi"
+import { FaDesktop } from "react-icons/fa"
 
 const About = () => {
   const { scrollSmooth } = useContext(Context)
@@ -21,44 +21,53 @@ const About = () => {
     >
       <SectionTitle title="About" />
       <div className="overflow-y-auto  h-[calc(100%-68px)]">
-        <SectionDescription description="Soy un Desarrollador Full Stack al que le encanta transformar ideas creativas en código sólido. Como desarrollador, busco crear soluciones escalables que mejoren la experiencia del usuario." />
+        <SectionDescription description="Desarrollador Full Stack con más de un año de experiencia en el diseño e implementación de aplicaciones web. Me especializo en construir soluciones robustas y escalables que integran una experiencia de usuario fluida con arquitecturas sólidas." />
 
         <div className="mt-6">
           <h2 className="font-semibold text-2xl mb-4">¿A qué me dedico?</h2>
-          <div className="flex flex-col gap-4 pb-16 xl:flex-row">
+          <div className="flex flex-col gap-4 xl:flex-row flex-wrap justify-center items-center">
             <Card
-              title="Full-Stack"
+              title="Frotnend"
               className={"md:h-[210px] xl:h-[210px]"}
-              icon={<IoCodeSlash size={35} color="#7F4AA6" />}
+              icon={<FaDesktop size={25} color="#7F4AA6" />}
               children={
                 <div>
                   <p className="mb-2">
-                    <span className="font-semibold mr-1">Frotnend:</span>
-                    Desarrollo de aplicaciones web y móviles, con interfaces
-                    atractivas e intuitivas.
-                  </p>
-
-                  <p>
-                    <span className="font-semibold mr-1">Backend:</span>
-                    Desarrollo de servicios web, APIs y bases de datos.
+                    Desarrollo de interfaces modernas, responsivas y accesibles
+                    para aplicaciones web y móviles, priorizando la experiencia
+                    del usuario, el rendimiento y la calidad de desarrollo.
                   </p>
                 </div>
               }
             />
 
             <Card
+              title="Backend"
+              className={"md:h-[210px] xl:h-[210px]"}
+              icon={<BiServer size={30} color="#7F4AA6" />}
+              children={
+                <div>
+                  Desarrollo de APIs robustas, Websockets, servicios escalables
+                  y gestión de bases de datos, aplicando buenas prácticas de
+                  seguridad y arquitectura.
+                </div>
+              }
+            />
+
+            {/* <Card
               title="SEO"
               className={"md:h-[210px] xl:h-[210px]"}
-              icon={<TbTournament size={30} color="#e2c060" />}
+              icon={<TbTournament size={25} color="#e2c060" />}
               children={
                 <div>
                   <p className="mb-2">
-                    Optimización de motores de búsqueda para mejorar la
-                    visibilidad de los sitios web.
+                    Optimización de sitios web para motores de búsqueda,
+                    mediante la mejora de la visibilidad, el rendimiento y el
+                    posicionamiento.
                   </p>
                 </div>
               }
-            />
+            /> */}
           </div>
         </div>
       </div>
