@@ -3,6 +3,7 @@ import { useContext } from "react"
 import PersonalData from "../pages/PersonalData"
 import About from "../pages/About"
 import Resume from "../pages/Resume"
+import Projects from "../pages/Projects"
 
 const Sections = () => {
   const { currentSection } = useContext(Context)
@@ -21,6 +22,11 @@ const Sections = () => {
       {currentSection === "Resume" && (
         <div className="md:w-3/6 h-screen flex justify-center md:items-center">
           <Resume />
+        </div>
+      )}
+      {currentSection === "Projects" && (
+        <div className="md:w-3/6 h-screen flex justify-center md:items-center">
+          <Projects />
         </div>
       )}
     </>
