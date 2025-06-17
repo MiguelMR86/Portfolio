@@ -16,6 +16,7 @@ import CSSLogo from "../assets/icon/css-logo.png"
 import LaravelLogo from "../assets/icon/laravel-logo.png"
 import MysqlsqlLogo from "../assets/icon/mysql-logo.svg"
 import BootstrapLogo from "../assets/icon/bootstrap-logo.svg"
+import PostgreSQLogo from "../assets/icon/PostgreSQL-logo.png"
 
 const Resume = () => {
   const width = "w-full max-w-[350px] md:max-w-full"
@@ -25,7 +26,7 @@ const Resume = () => {
     <div
       className={`w-full bg-primary rounded-xl mt-5 md:mt-0 p-10 ${width} ${height}`}
     >
-      <SectionTitle title="Trayectoria" />
+      <SectionTitle title="Resume" />
 
       <div className="xl:flex xl:justify-between gap-8 bg-red-00 mt-6 h-[calc(100%-68px)] overflow-y-auto">
         <div className="xl:overflow-y-auto mb-20 xl:mb-0">
@@ -34,18 +35,6 @@ const Resume = () => {
             <h2 className="font-semibold text-2xl">Educación</h2>
           </div>
           <div className="flex flex-col gap-4 overflow-y-auto">
-            <Card
-              children={
-                <div>
-                  <p className="font-semibold text-[16px]">
-                    Bachillerato - Ciencias Sociales
-                  </p>
-                  <p className="font-semibold text-gray-500">2018 - 2020</p>
-                  <p className="mb-2 text-gray-500">IES Jose Frugoni Pérez</p>
-                </div>
-              }
-            />
-
             <Card
               children={
                 <>
@@ -171,14 +160,12 @@ const Resume = () => {
                 <>
                   <div>
                     <p className="font-semibold text-[16px]">
-                      Talentus - Desarrollador Web Full Stack
+                      Talentus - Desarrollador Web Full-Stack
                     </p>
                     <p className="font-semibold text-gray-500">
                       Enero 2024 - Actualidad
                     </p>
-                    <p className="mb-2 text-gray-500">
-                      Prácticas del ciclo superior
-                    </p>
+                    <p className="mb-2 text-gray-500">Desarrollador</p>
                   </div>
 
                   <div className="flex items-center gap-4 overflow-x-auto ">
@@ -210,6 +197,12 @@ const Resume = () => {
                       src={DjangoLogo}
                       alt="Django Logo"
                       title="Django Logo"
+                      className="w-13 h-8"
+                    />
+                    <img
+                      src={PostgreSQLogo}
+                      alt="PostgreSQL"
+                      title="PostgreSQL Logo"
                       className="w-13 h-8"
                     />
                   </div>
