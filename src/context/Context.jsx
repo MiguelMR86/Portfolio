@@ -1,5 +1,18 @@
 import React, { useState, createContext } from "react"
+import ReactLogo from "../assets/icon/react-logo.svg"
 import emailjs from "@emailjs/browser"
+import TailwindLogo from "../assets/icon/tailwind-logo.png"
+import FirebaseLogo from "../assets/icon/Firebase-logo.png"
+import MaterialTailwindLogo from "../assets/icon/MaterialTailwind-logo.png"
+import DaisyUILogo from "../assets/icon/DaisyUI-logo.png"
+import TsParticlesLogo from "../assets/icon/TsParticles-logo.png"
+import ThreeJsLogo from "../assets/icon/ThreeJs-logo.png"
+import VueLogo from "../assets/icon/Vue-logo.png"
+import PiniaLogo from "../assets/icon/Pinia-logo.png"
+import DjangoLogo from "../assets/icon/Django-logo.png"
+import PostgreSQLLogo from "../assets/icon/PostgreSQL-logo.png"
+import PythonLogo from "../assets/icon/python-logo.svg"
+import TypescriptLogo from "../assets/icon/typescript-logo.svg"
 
 export const Context = createContext()
 
@@ -8,112 +21,135 @@ export function ContextProvider({ children, value: { ...other } }) {
   const [openMenu, setOpenMenu] = useState(false)
   const [currentSection, setCurrentSection] = useState("About")
 
+  const projects_coming_soon = [
+    {
+      name: "MR-Chat ( Cooming soon )",
+      shortDescription:
+        "Esta una app de mensajería instantanea, para comunicarse de forma rápida, fluida y segura. El objetivo de este proyecto es crear un chat con una araquitectura solida y escalable.",
+      technologies: [
+        { src: ReactLogo, alt: "React logo", title: "React" },
+        { src: TypescriptLogo, alt: "Typescript logo", title: "Typescript" },
+        { src: TailwindLogo, alt: "Tailwind CSS logo", title: "Tailwind CSS" },
+        {
+          src: PythonLogo,
+          alt: "Python logo",
+          title: "Python",
+        },
+        {
+          src: DjangoLogo,
+          alt: "Django logo",
+          title: "Django",
+        },
+        {
+          src: PostgreSQLLogo,
+          alt: "PostgreSQL logo",
+          title: "PostgreSQL",
+        },
+      ],
+    },
+  ]
+
   const projects = [
     {
       name: "TaskHub",
       shortDescription:
-        "TaskHub es una aplicación web que permite a los usuarios gestionar y organizar sus tareas de manera eficiente",
-      technologies: {
-        frontend: [
-          "HTML",
-          "tailwindcss",
-          "JavaScript",
-          "React",
-          "Material-Tailwind",
-        ],
-        backend: ["Firebase", "Node", "Vite"],
-      },
+        "TaskHub es una aplicación web que permite a los usuarios gestionar y organizar sus tareas de manera eficiente.",
+      technologies: [
+        { src: ReactLogo, alt: "React logo", title: "React" },
+        { src: TailwindLogo, alt: "Tailwind CSS logo", title: "Tailwind CSS" },
+        {
+          src: MaterialTailwindLogo,
+          alt: "Material Tailwind logo",
+          title: "Material Tailwind",
+        },
+        { src: FirebaseLogo, alt: "Firebase logo", title: "Firebase" },
+      ],
       links: {
         github: "https://github.com/MiguelMR86/TaskHub",
         web: "https://taskhub-46037.web.app/",
-        img: "https://user-images.githubusercontent.com/90867675/285054889-e8d22814-c09c-4721-be08-0bf5dbf152c0.png",
       },
     },
     {
       name: "METEC",
       shortDescription:
-        "E-commerce of technologies products made by Miguel and Edvin",
-      technologies: {
-        frontend: [
-          "HTML",
-          "tailwindcss",
-          "JavaScript",
-          "React",
-          "Material-Tailwind",
-          "DaisyUI",
-          "TsParticles",
-        ],
-        backend: ["Firebase", "Node", "Vite"],
-      },
+        "METEC es un E-commerce de productos tecnológicos, este fue mi proyecto de fin de curso.",
+      technologies: [
+        { src: ReactLogo, alt: "React logo", title: "React" },
+        { src: TailwindLogo, alt: "Tailwind CSS logo", title: "Tailwind CSS" },
+        {
+          src: MaterialTailwindLogo,
+          alt: "Material Tailwind logo",
+          title: "Material Tailwind",
+        },
+        { src: DaisyUILogo, alt: "DaisyUI logo", title: "DaisyUI" },
+        { src: TsParticlesLogo, alt: "TsParticles logo", title: "TsParticles" },
+        { src: FirebaseLogo, alt: "Firebase logo", title: "Firebase" },
+      ],
       links: {
         github: "https://github.com/Edvintrabajo/metec-ecommerce",
         web: "https://test-metec-3.web.app/",
-        img: "https://user-images.githubusercontent.com/90867675/269961501-1eceb756-e372-4dbd-9917-b3267b7bb0a9.png",
       },
     },
     {
       name: "InfinityGif",
       shortDescription:
-        "InfinityGif es una aplicación web que te permite explorar y descargar gifs de manera infinita a medida que haces scroll",
-      technologies: {
-        frontend: [
-          "HTML",
-          "tailwindcss",
-          "JavaScript",
-          "React",
-          "Material-Tailwind",
-        ],
-        backend: ["Node", "Vite"],
-      },
+        "InfinityGif es una aplicación web que te permite explorar y descargar gifs de manera infinita a medida que haces scroll.",
+      technologies: [
+        { src: ReactLogo, alt: "React logo", title: "React" },
+        { src: TailwindLogo, alt: "Tailwind CSS logo", title: "Tailwind CSS" },
+        {
+          src: MaterialTailwindLogo,
+          alt: "Material Tailwind logo",
+          title: "Material Tailwind",
+        },
+      ],
       links: {
         github: "https://github.com/MiguelMR86/InfinityGif",
         web: "https://infinity-gif.vercel.app/",
-        img: "https://user-images.githubusercontent.com/90867675/259465936-7f572ad0-8c90-41b9-86ba-456dd9294f64.png",
       },
     },
     {
       name: "Planetary",
       shortDescription:
-        "Planetary es un proyecto que combina Three.js y React para crear un emocionante planetario 3D interactivo",
-      technologies: {
-        frontend: ["HTML", "tailwindcss", "JavaScript", "React", "Three.js"],
-        backend: ["Node", "Vite"],
-      },
+        "Planetary es un proyecto que combina Three.js y React para crear un emocionante planetario 3D interactivo.",
+      technologies: [
+        { src: ReactLogo, alt: "React logo", title: "React" },
+        { src: TailwindLogo, alt: "Tailwind CSS logo", title: "Tailwind CSS" },
+        { src: ThreeJsLogo, alt: "Three.js logo", title: "Three.js" },
+      ],
       links: {
         github: "https://github.com/MarioDevv/Planetary",
         web: "https://planetary-orcin.vercel.app/",
-        img: "https://user-images.githubusercontent.com/90867675/259512688-929c7cdd-9e1e-4b7d-b2ed-5e7c70b1bda1.png",
       },
     },
     {
       name: "FiftySaving-Vue",
       shortDescription:
-        "Esta es una simple app con una funcionalidad simple, te permite ahorrar 1275 € en 50 días",
-      technologies: {
-        frontend: ["HTML", "CSS", "JavaScript", "Vue", "Pinia"],
-        backend: ["Node", "Vite"],
-      },
+        "Esta es una simple app con una funcionalidad simple, te permite ahorrar 1275 € en 50 días.",
+      technologies: [
+        { src: VueLogo, alt: "Vue logo", title: "Vue" },
+        { src: PiniaLogo, alt: "Pinia logo", title: "Pinia" },
+      ],
       links: {
         github: "https://github.com/MiguelMR86/FiftySaving-Vue",
         web: "https://fifty-saving.vercel.app/",
-        img: "https://user-images.githubusercontent.com/90867675/267636913-a2ebb9a0-7218-4629-8eef-1379502b2ff0.png",
       },
     },
     {
       name: "Calculator-Vue",
       shortDescription:
-        "Esta es una calculadora web avanzada desarrollada con Vue 3, TypeScript y Vite",
-      technologies: {
-        frontend: ["HTML", "CSS", "JavaScript", "Vue"],
-        backend: ["Node", "Vite"],
-      },
+        "Esta es una calculadora web avanzada desarrollada con Vue 3, TypeScript y Vite.",
+      technologies: [
+        { src: VueLogo, alt: "Vue logo", title: "Vue" },
+        { src: PiniaLogo, alt: "Pinia logo", title: "Pinia" },
+      ],
       links: {
         github: "https://github.com/MiguelMR86/Calculator-Vue",
         web: "https://calculator-vue-ts.netlify.app/",
-        img: "https://user-images.githubusercontent.com/90867675/265047903-4fe77e86-7f55-4d9c-a130-36fa0699f61e.png",
       },
     },
   ]
+
   // Handlers
   const handleOpenMenu = () => setOpenMenu(!openMenu)
 
@@ -175,6 +211,7 @@ export function ContextProvider({ children, value: { ...other } }) {
     currentSection,
     setCurrentSection,
     projects,
+    projects_coming_soon,
     status,
     handleSubmit,
   }
