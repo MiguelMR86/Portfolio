@@ -22,10 +22,10 @@ const MenuSections = () => {
       Icon: <TbTemplate size={30} />,
       section: "Projects",
     },
-    {
-      Icon: <AiOutlineMessage size={30} />,
-      section: "Contact",
-    },
+    // {
+    //   Icon: <AiOutlineMessage size={30} />,
+    //   section: "Contact",
+    // },
   ]
 
   return menuSections.map((item, index) => {
@@ -39,7 +39,7 @@ const MenuSections = () => {
       <button
         key={index}
         onClick={() => setCurrentSection(section)}
-        className={`${currentSectionStyle}  w-14 xs:w-16 flex flex-col items-center justify-center text-default rounded-lg p-2 transition-all duration-300 ease-in-out cursor-pointer`}
+        className={`${currentSectionStyle} border-2 w-14 xs:w-16 flex flex-col items-center justify-center text-default rounded-lg p-2 transition-all duration-300 ease-in-out cursor-pointer`}
       >
         {Icon}
         {section && <p className="text-xs  md:block">{section}</p>}
