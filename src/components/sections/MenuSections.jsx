@@ -22,10 +22,10 @@ const MenuSections = () => {
       Icon: <TbTemplate size={30} />,
       section: "Projects",
     },
-    // {
-    //   Icon: <AiOutlineMessage size={30} />,
-    //   section: "Contact",
-    // },
+    {
+      Icon: <AiOutlineMessage size={30} />,
+      section: "Contact",
+    },
   ]
 
   return menuSections.map((item, index) => {

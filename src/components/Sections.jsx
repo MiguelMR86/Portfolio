@@ -4,6 +4,7 @@ import PersonalData from "../pages/PersonalData"
 import About from "../pages/About"
 import Resume from "../pages/Resume"
 import Projects from "../pages/Projects"
+import Contact from "../pages/Contact"
 
 const Sections = () => {
   const { currentSection } = useContext(Context)
@@ -27,6 +28,11 @@ const Sections = () => {
       {currentSection === "Projects" && (
         <div className="md:w-3/6 h-screen flex justify-center md:items-center">
           <Projects />
+        </div>
+      )}
+      {currentSection === "Contact" && (
+        <div className="md:w-3/6 h-screen flex justify-center md:items-center">
+          <Contact />
         </div>
       )}
     </>
