@@ -175,18 +175,25 @@ export function ContextProvider({ children, value: { ...other } }) {
     statusCont.classList.add("on-fade-in")
     statusCont.classList.add("animate-fade-in")
 
+    const email_js_service_id = import.meta.env.VITE_EMAIL_JS_SERVICE_ID
+    const email_js_template_id = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID
+    const email_js_public_key = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
+
     try {
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setStatus("Por favor, rellena todos los campos")
       } else {
         emailjs
           .sendForm(
-            "service_en7yssh",
-            "template_lihpmh6",
+            email_js_service_id,
+            email_js_template_id,
             form.current,
-            "12kMxdtztEBwQaSGR"
+            email_js_public_key
           )
-          .then(() => {
+          .then((data) => {
+            if (!data.ok) {
+              setStatus("Error al enviar el mensaje")
+            }
             setStatus("Mensaje enviado con éxito")
             form.current.reset()
           })
@@ -205,6 +212,12 @@ export function ContextProvider({ children, value: { ...other } }) {
     }
   }
 
+  const handleContactWithWhatsapp = () => {
+    const phoneNumber = "34645957229"
+    const url = `https://wa.me/${phoneNumber}}`
+    window.open(url, "_blank")
+  }
+
   const operators = {
     openMenu,
     handleOpenMenu,
@@ -214,6 +227,7 @@ export function ContextProvider({ children, value: { ...other } }) {
     projects_coming_soon,
     status,
     handleSubmit,
+    handleContactWithWhatsapp,
   }
 
   return (
